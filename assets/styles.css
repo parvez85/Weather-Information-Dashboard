@@ -1,0 +1,33 @@
+/* navbar styles */
+.nav-bar{
+    text-align: center;
+    background-image: linear-gradient(to  right, #3360B9, #210B4E);   
+  } 
+    /* for temperature data display body area */
+  .col-12.box {         
+      border: 2px solid #000000; 
+     }
+  /* temperature font */
+  .temperatureFont {
+    font-family: 'Quicksand', sans-serif;
+  }
+  /* for city searched box  */
+  .forecast{
+    background-color: #2D3E50;  
+    transition: transform .2s; /* Animation */ 
+  }
+  .forecast:hover{
+    transform: scale(1.15);
+  }
+  /* searched city button  */
+  li{
+    margin-bottom: 10px;
+    margin-left: -40px;
+  }
+  .imgsize {
+    width: 100px;
+    float: right;
+    margin-right: 50%;  
+  }
+  
+  
