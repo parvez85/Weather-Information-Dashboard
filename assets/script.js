@@ -106,3 +106,44 @@ function displayForecast(c) {
         }
     });
 };
+// Display automatic Current Locaion 
+function currentLocation() {
+    $.ajax({
+        url: "https://ip-api.io/json/",
+        method: "GET",
+    }).then(function (response) {
+        q = response.city || 'London';
+        console.log(q);
+        getWeather(q);
+    });
+};
+// Function to get data store in Locaal Storage 
+function checkLocalStorage() {
+    var storedData = localStorage.getItem('queries');
+    var dataArray = [];
+    if (!storedData) {
+        console.log("no data stored");
+    } else {
+        storedData.trim();
+        dataArray = storedData.split(',');
+        for (var i = 0; i < dataArray.length; i++) {
+            createRecentSearchBtn(dataArray[i]);
+        }
+    }
+};
+// Function to Set data in Local storage
+function saveToLocalStorage(q) {
+    var data = localStorage.getItem('queries');
+    if (data) {
+        console.log(data, q)
+
+    } else {
+        data = q;
+        localStorage.setItem('queries', data);
+    }
+    if (data.indexOf(q) === -1) {
+        data = data + ',' + q;
+        localStorage.setItem('queries', data);
+        createRecentSearchBtn(q);
+    }
+}
