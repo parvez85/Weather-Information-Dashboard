@@ -1,14 +1,14 @@
-$(window).on('load', function() {
+$(window).on('load', function () {
     currentLocation();
     checkLocalStorage();
-
-})
+});
 // API Key for all weather data 
 var APIKey = "a81e4b0d75821cdde2c1ad5ea1dc05ad";
 var q = "";
 var now = moment();
 //Date and time formate for header
 var currentDate = now.format('DD/MM/YYYY');
+
 
 //Setting the click function at ID search button
 $("#search-button").on("click", function (event) {
@@ -23,7 +23,6 @@ $("#search-button").on("click", function (event) {
 
     saveToLocalStorage(q);
 });
-
 // Function to create Button for searched city 
 function createRecentSearchBtn(q) {
     var newLi = $("<li>")
@@ -117,6 +116,7 @@ function currentLocation() {
         getWeather(q);
     });
 };
+
 // Function to get data store in Locaal Storage 
 function checkLocalStorage() {
     var storedData = localStorage.getItem('queries');

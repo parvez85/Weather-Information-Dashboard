@@ -20,5 +20,14 @@ jQuery
 Moment.js for date/time formatting
 OpenWeather API for weather data
 
+please click on the following links to learn more about weather information dashboard.
+
+https://parvez85.github.io/Weather-Information-Dashboard/
+
+
+The URL of the GitHub repository.
+
+https://github.com/parvez85/Weather-Information-Dashboard
+
 
 
